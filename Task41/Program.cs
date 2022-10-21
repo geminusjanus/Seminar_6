@@ -25,24 +25,24 @@ int[] ArrayNumbers(string input)
             count++;
         }
     }
-    int[] numbers = new int [count];
+    int[] numbers = new int[count];
     int index = 0;
     for (int i = 0; i < input.Length; i++)
     {
         string temp = "";
 
-        while (input [i] != ',')
+        while (input[i] != ',')
         {
-        if(i != input.Length - 1)
-        {
-            temp += input [i].ToString();
-            i++;
-        }
-        else
-        {
-            temp += input [i].ToString();
-            break;
-        }
+            if (i != input.Length - 1)
+            {
+                temp += input[i].ToString();
+                i++;
+            }
+            else
+            {
+                temp += input[i].ToString();
+                break;
+            }
         }
         numbers[index] = Convert.ToInt32(temp);
         index++;
