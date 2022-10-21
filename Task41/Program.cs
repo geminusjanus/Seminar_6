@@ -4,7 +4,7 @@
 // -1, -7, 567, 89, 223-> 3
 
 Console.Write("Введите числа через запятую: ");
-int[] numbers = StringNumbers(Console.ReadLine());
+int[] numbers = ArrayNumbers(Console.ReadLine());
 int sum = 0;
 for (int i = 0; i < numbers.Length; i++)
 {
@@ -15,8 +15,7 @@ for (int i = 0; i < numbers.Length; i++)
 }
 Console.WriteLine($"Количество чисел больше 0 = {sum}");
 
-
-int[] StringNumbers(string input)
+int[] ArrayNumbers(string input)
 {
     int count = 1;
     for (int i = 0; i < input.Length; i++)
@@ -26,10 +25,8 @@ int[] StringNumbers(string input)
             count++;
         }
     }
-
     int[] numbers = new int [count];
     int index = 0;
-
     for (int i = 0; i < input.Length; i++)
     {
         string temp = "";
